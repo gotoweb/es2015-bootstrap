@@ -50,10 +50,16 @@
 	
 	var _Hello2 = _interopRequireDefault(_Hello);
 	
+	var _MyAngularController = __webpack_require__(2);
+	
+	var _MyAngularController2 = _interopRequireDefault(_MyAngularController);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var hello = new _Hello2.default();
 	hello.world();
+	
+	angular.module('myApp', []).controller('MyAngularController', _MyAngularController2.default);
 
 /***/ },
 /* 1 */
@@ -87,6 +93,28 @@
 	})();
 	
 	exports.default = Hello;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	function MyAngularController() {
+		var _this = this;
+	
+		this.bindingTest = 'MyAngularController binding';
+		this.repeatTest = ['xeraph', 'gotoweb', 'lsehoon'];
+	
+		this.changeText = function () {
+			_this.bindingTest = 'changed!';
+		};
+	}
+	
+	exports.default = MyAngularController;
 
 /***/ }
 /******/ ]);
